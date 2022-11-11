@@ -9,13 +9,14 @@ internal struct MessageView: View {
             viewStore in
             
             Text(viewStore.message)
-                .font(.headline)
+                .font(Font.body.bold())
                 .foregroundColor(.black)
                 .padding()
                 .background(
                     content: {
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundColor(.white)
+                            .shadow(radius: 5)
                     }
                 )
         }

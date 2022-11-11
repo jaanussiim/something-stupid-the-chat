@@ -35,7 +35,7 @@ internal struct Application: ReducerProtocol {
                 return EffectTask.run {
                     send in
                     
-                    try await Task.sleep(seconds: 10)
+                    try await Task.sleep(seconds: 20)
                     await send(.clearMessage(message.id), animation: .default)
                 }
                 
