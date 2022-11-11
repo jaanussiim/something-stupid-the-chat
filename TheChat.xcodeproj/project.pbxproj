@@ -11,6 +11,10 @@
 		EAA3909D291E091600F033AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA3909C291E091600F033AB /* ContentView.swift */; };
 		EAA3909F291E091700F033AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAA3909E291E091700F033AB /* Assets.xcassets */; };
 		EAA390A2291E091700F033AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAA390A1291E091700F033AB /* Preview Assets.xcassets */; };
+		EAA390AB291E0A4D00F033AB /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EAA390AA291E0A4D00F033AB /* ComposableArchitecture */; };
+		EAA390AD291E0A5C00F033AB /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA390AC291E0A5C00F033AB /* Application.swift */; };
+		EAA390AF291E0AB900F033AB /* ApplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA390AE291E0AB900F033AB /* ApplicationView.swift */; };
+		EAA390B1291E0B4C00F033AB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA390B0291E0B4C00F033AB /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,9 @@
 		EAA3909E291E091700F033AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAA390A1291E091700F033AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EAA390A3291E091700F033AB /* TheChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TheChat.entitlements; sourceTree = "<group>"; };
+		EAA390AC291E0A5C00F033AB /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		EAA390AE291E0AB900F033AB /* ApplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationView.swift; sourceTree = "<group>"; };
+		EAA390B0291E0B4C00F033AB /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAA390AB291E0A4D00F033AB /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,11 +60,14 @@
 		EAA39099291E091600F033AB /* TheChat */ = {
 			isa = PBXGroup;
 			children = (
-				EAA3909A291E091600F033AB /* TheChatApp.swift */,
-				EAA3909C291E091600F033AB /* ContentView.swift */,
+				EAA390AC291E0A5C00F033AB /* Application.swift */,
+				EAA390AE291E0AB900F033AB /* ApplicationView.swift */,
 				EAA3909E291E091700F033AB /* Assets.xcassets */,
-				EAA390A3291E091700F033AB /* TheChat.entitlements */,
+				EAA3909C291E091600F033AB /* ContentView.swift */,
+				EAA390B0291E0B4C00F033AB /* Message.swift */,
 				EAA390A0291E091700F033AB /* Preview Content */,
+				EAA390A3291E091700F033AB /* TheChat.entitlements */,
+				EAA3909A291E091600F033AB /* TheChatApp.swift */,
 			);
 			path = TheChat;
 			sourceTree = "<group>";
@@ -85,6 +96,9 @@
 			dependencies = (
 			);
 			name = TheChat;
+			packageProductDependencies = (
+				EAA390AA291E0A4D00F033AB /* ComposableArchitecture */,
+			);
 			productName = TheChat;
 			productReference = EAA39097291E091600F033AB /* TheChat.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +127,9 @@
 				Base,
 			);
 			mainGroup = EAA3908E291E091600F033AB;
+			packageReferences = (
+				EAA390A9291E0A4D00F033AB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = EAA39098291E091600F033AB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +156,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAA390B1291E0B4C00F033AB /* Message.swift in Sources */,
+				EAA390AD291E0A5C00F033AB /* Application.swift in Sources */,
 				EAA3909D291E091600F033AB /* ContentView.swift in Sources */,
 				EAA3909B291E091600F033AB /* TheChatApp.swift in Sources */,
+				EAA390AF291E0AB900F033AB /* ApplicationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EAA390A9291E0A4D00F033AB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.45.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EAA390AA291E0A4D00F033AB /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EAA390A9291E0A4D00F033AB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EAA3908F291E091600F033AB /* Project object */;
 }
